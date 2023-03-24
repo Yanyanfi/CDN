@@ -1,0 +1,10 @@
+payload:
+  - DOMAIN-SUFFIX,turnin.com
+  - DOMAIN-SUFFIX,amazon-adsystem.com
+  - DOMAIN-SUFFIX,pubmatic.com
+  - DOMAIN-SUFFIX,acast.com
+  - DOMAIN-SUFFIX,adswizz.com
+  - DOMAIN-SUFFIX,openx.net
+  - DOMAIN-SUFFIX,crwdcntrl.net
+  - DOMAIN-SUFFIX,agkn.com
+  - DOMAIN-SUFFIX,radiotime.com
