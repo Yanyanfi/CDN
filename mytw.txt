@@ -1,0 +1,8 @@
+payload:
+  - DOMAIN-SUFFIX,gamer.com.tw,TW
+  - DOMAIN-SUFFIX,bahamut.com.tw,TW
+  - DOMAIN-SUFFIX,hinet.net,TW
+  - DOMAIN-SUFFIX,fbcdn.net,TW
+  - DOMAIN-SUFFIX,gvt1.com,TW
+  - DOMAIN-SUFFIX,digicert.com,TW
+  - DOMAIN-SUFFIX,viblast.com,TW
