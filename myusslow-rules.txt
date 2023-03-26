@@ -1,4 +1,2 @@
 payload:
   - DOMAIN,example.com
-  - DOMAIN-SUFFIX,cdninstagram.com
-  - DOMAIN-SUFFIX,instagram.com
