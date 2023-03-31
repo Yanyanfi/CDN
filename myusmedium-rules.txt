@@ -1,2 +1,2 @@
 payload:
-  - DOMAIN-KEYWORD,pornhub
+  - DOMAIN,example.com
