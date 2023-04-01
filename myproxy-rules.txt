@@ -1,4 +1,3 @@
 payload:
   - DOMAIN-KEYWORD,twitter
-  - DOMAIN-KEYWORD,github
   - DOMAIN-SUFFIX,google.com
