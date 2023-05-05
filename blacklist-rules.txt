@@ -2,4 +2,3 @@ payload:
   - DOMAIN,tracking.miui.com
   - DOMAIN,data.mistat.xiaomi.com
   - DOMAIN,mbd.baidu.com
-  - DOMAIN,sdkconfig.ad.xiaomi.com
