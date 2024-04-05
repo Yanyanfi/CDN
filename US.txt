@@ -1,3 +1,2 @@
 payload:
   - DOMAIN,example.com
-  - DOMAIN-SUFFIX,oaistatic.com
