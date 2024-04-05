@@ -1,11 +1,11 @@
 payload:
     - DOMAIN-SUFFIX,oaistatic.com
-    - 'DOMAIN-SUFFIX,bing
-    - 'DOMAIN-SUFFIX,bing.com
-    - 'DOMAIN-SUFFIX,bing.com.cn
-    - 'DOMAIN-SUFFIX,openai.com
-    - 'DOMAIN-KEYWORD,openai
-    - 'DOMAIN-SUFFIX,sentry.io
-    - 'DOMAIN-SUFFIX,ai.com
-    - 'DOMAIN,cdn.auth0.com
-    - 'DOMAIN,bard.google.com
+    - DOMAIN-SUFFIX,bing
+    - DOMAIN-SUFFIX,bing.com
+    - DOMAIN-SUFFIX,bing.com.cn
+    - DOMAIN-SUFFIX,openai.com
+    - DOMAIN-KEYWORD,openai
+    - DOMAIN-SUFFIX,sentry.io
+    - DOMAIN-SUFFIX,ai.com
+    - DOMAIN,cdn.auth0.com
+    - DOMAIN,bard.google.com
