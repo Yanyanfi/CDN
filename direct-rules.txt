@@ -1,4 +1,0 @@
-payload:
-  - DOMAIN-SUFFIX,steamcontent.com
-  - DOMAIN,media.st.dl.eccdnx.com
-
