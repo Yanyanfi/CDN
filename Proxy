@@ -1,5 +1,6 @@
 payload:
-	- DOMAIN-SUFFIX,z-lib.sk
+  - DOMAIN-SUFFIX,etahub.com
+  - DOMAIN-SUFFIX,z-lib.sk
   - DOMAIN-SUFFIX,us3.hamreus.com
   - DOMAIN-SUFFIX,manhuagui.com
   - DOMAIN-SUFFIX,cf.mhgui.com
