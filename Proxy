@@ -1,8 +1,9 @@
 payload:
+  - DOMAIN-KEYWORD,chonglangtv
   - DOMAIN-KEYWORD,realtek
-  - DOMAIN-SUFFIX,hcaptcha.com
   - DOMAIN,linqpad.cn
   - DOMAIN,xn--vuq87fk7jum5c1xb.com
+  - DOMAIN-SUFFIX,hcaptcha.com
   - DOMAIN-SUFFIX,mozilla.org
   - DOMAIN-SUFFIX,python.org
   - DOMAIN-SUFFIX,etahub.com
@@ -11,7 +12,6 @@ payload:
   - DOMAIN-SUFFIX,manhuagui.com
   - DOMAIN-SUFFIX,cf.mhgui.com
   - DOMAIN-SUFFIX,eu2.hamreus.com
-  - DOMAIN-KEYWORD,chonglangtv
   - DOMAIN-SUFFIX,chinadigitaltimes.net
   - DOMAIN-SUFFIX,hinative.com
   - DOMAIN-SUFFIX,pan.ioskn.top
