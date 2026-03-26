@@ -1,4 +1,2 @@
 payload:
-  - DOMAIN,gstore.val.smogfly.com
-  - DOMAIN,gstore.val.manlaxy.com
   - DOMAIN-SUFFIX,myself-bbs.com
