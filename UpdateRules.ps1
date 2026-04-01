@@ -1,15 +1,13 @@
+param(
+    [switch]$MyRules,
+    [switch]$RemoteRules,
+    [switch]$Local
+)
 Push-Location $PSScriptRoot
-$domainSuffixPattern = "\s*- '\+\.(.+)'";
+$domainSuffixPattern = "\s*- '\+\.(.+)'"
 $domainPattern = "\s*- '([^\+]*)'"
-$clashGfw =  
-Invoke-WebRequest -Uri https://gl.bbkss.org/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt -Method Get
-| Select-Object -ExpandProperty Content
-| ForEach-Object { $_ -split "`n" }
-
-$clashDirect = 
-Invoke-WebRequest -Uri https://gl.bbkss.org/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt -Method Get
-| Select-Object -ExpandProperty Content
-| ForEach-Object { $_ -split "`n" }
+$lDomainPattern = "\s*- DOMAIN,([^\+]*)"
+$lDomainSuffixPattern = "\s*- DOMAIN-SUFFIX,([^\+]*)"
 function  Write-LoonRules {
     param (
         [Parameter(Mandatory, ValueFromPipelineByPropertyName)]
@@ -25,12 +23,40 @@ function  Write-LoonRules {
         elseif ($_ -match $domainSuffixPattern) {
             $_ -replace $domainSuffixPattern, 'DOMAIN-SUFFIX,$1'
         }
+        elseif ($_ -match $lDomainPattern) {
+            $_ -replace $lDomainPattern, 'DOMAIN,$1'
+        }
+        elseif ($_ -match $lDomainSuffixPattern) {
+            $_ -replace $lDomainSuffixPattern, 'DOMAIN-SUFFIX,$1'
+        }
     }
     | Out-File $Path
 }
-Write-LoonRules -Path .\GFW_Loon -ClashRuleSet $clashGfw
-Write-LoonRules -Path .\SuperDirect_Loon -ClashRuleSet $clashDirect
+
+if ($RemoteRules) {
+    $clashGfw =  
+    Invoke-WebRequest -Uri https://gl.bbkss.org/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt -Method Get
+    | Select-Object -ExpandProperty Content
+    | ForEach-Object { $_ -split "`n" }
+
+    $clashDirect = 
+    Invoke-WebRequest -Uri https://gl.bbkss.org/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt -Method Get
+    | Select-Object -ExpandProperty Content
+    | ForEach-Object { $_ -split "`n" }
+
+    Write-LoonRules -Path .\GFW_Loon -ClashRuleSet $clashGfw
+    Write-LoonRules -Path .\SuperDirect_Loon -ClashRuleSet $clashDirect
+}
+if($MyRules){
+    $clashDirect = Get-Content .\Direct
+    $clashProxy = Get-Content .\Proxy
+    Write-LoonRules -Path .\Direct_Loon -ClashRuleSet $clashDirect
+    Write-LoonRules -Path .\Proxy_Loon -ClashRuleSet $clashProxy
+}
 git add .
 git commit -m "update loon rules"
-git push
+if (-not $Local) {
+    git push    
+}
+
 
