@@ -1,6 +1,6 @@
 Push-Location $PSScriptRoot
-$domainPattern = "\s*- '\+\.(.+)'";
-$domainSuffixPattern = "\s*- '([^\+]*)'"
+$domainSuffixPattern = "\s*- '\+\.(.+)'";
+$domainPattern = "\s*- '([^\+]*)'"
 $clashGfw =  
 Invoke-WebRequest -Uri https://gl.bbkss.org/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt -Method Get
 | Select-Object -ExpandProperty Content
@@ -20,10 +20,10 @@ function  Write-LoonRules {
     $ClashRuleSet
     | ForEach-Object {
         if ($_ -match $domainPattern) {
-            $_ -replace $domainPattern, "DOMAIN,$1"
+            $_ -replace $domainPattern, 'DOMAIN,$1'
         }
         elseif ($_ -match $domainSuffixPattern) {
-            $_ -replace $domainSuffixPattern, "DOMAIN-SUFFIX,$1"
+            $_ -replace $domainSuffixPattern, 'DOMAIN-SUFFIX,$1'
         }
     }
     | Out-File $Path
