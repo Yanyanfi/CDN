@@ -8,6 +8,7 @@ $domainSuffixPattern = "\s*- '\+\.(.+)'"
 $domainPattern = "\s*- '([^\+]*)'"
 $lDomainPattern = "\s*- DOMAIN,([^\+]*)"
 $lDomainSuffixPattern = "\s*- DOMAIN-SUFFIX,([^\+]*)"
+$lDomainKeywordPattern = "\s*- DOMAIN-KEYWORD,([^\+]*)"
 function  Write-LoonRules {
     param (
         [Parameter(Mandatory, ValueFromPipelineByPropertyName)]
@@ -28,6 +29,9 @@ function  Write-LoonRules {
         }
         elseif ($_ -match $lDomainSuffixPattern) {
             $_ -replace $lDomainSuffixPattern, 'DOMAIN-SUFFIX,$1'
+        }
+        elseif ($_ -match $lDomainKeywordPattern) {
+            $_ -replace $lDomainKeywordPattern, 'DOMAIN-KEYWORD,$1'
         }
     }
     | Out-File $Path
