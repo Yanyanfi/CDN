@@ -21,6 +21,7 @@ payload:
   - DOMAIN-SUFFIX,bygcloud.com
   - DOMAIN-SUFFIX,sibker.com
   - DOMAIN-SUFFIX,codingame.com
+  - DOMAIN-SUFFIX,uccre.cc
   - DOMAIN-KEYWORD,chonglangtv
   - DOMAIN-KEYWORD,realtek
   - DOMAIN-KEYWORD,deepl
