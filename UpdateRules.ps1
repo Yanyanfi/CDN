@@ -54,8 +54,10 @@ if ($RemoteRules) {
 if($MyRules){
     $clashDirect = Get-Content .\Direct
     $clashProxy = Get-Content .\Proxy
+    $clashSpecialProxy = Get-Content .\SpecialProxy
     Write-LoonRules -Path .\Direct_Loon -ClashRuleSet $clashDirect
     Write-LoonRules -Path .\Proxy_Loon -ClashRuleSet $clashProxy
+    Write-LoonRules -Path .\SpecialProxy_Loon -ClashRuleSet $clashSpecialProxy
 }
 git add .
 git commit -m "update loon rules"

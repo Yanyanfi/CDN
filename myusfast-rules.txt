@@ -1,3 +1,0 @@
-payload:
-  - DOMAIN-SUFFIX,bing.com
-  - DOMAIN-KEYWORD,openai

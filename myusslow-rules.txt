@@ -1,4 +1,0 @@
-payload:
-  - DOMAIN,example.com
-  - DOMAIN-KEYWORD,pornhub
-  - DOMAIN-SUFFIX,microsoftpersonalcontent.com
