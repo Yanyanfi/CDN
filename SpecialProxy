@@ -1,1 +1,2 @@
-DOMAIN-KEYWORD,openrouter
+payload:
+  - DOMAIN-KEYWORD,openrouter

@@ -3,6 +3,7 @@ param(
     [switch]$RemoteRules,
     [switch]$Local
 )
+Import-Module 'C:\Projects\clash_configration\ClashConfig.psm1'
 Push-Location $PSScriptRoot
 $domainSuffixPattern = "\s*- '\+\.(.+)'"
 $domainPattern = "\s*- '([^\+]*)'"
@@ -64,5 +65,5 @@ git commit -m "update loon rules"
 if (-not $Local) {
     git push    
 }
-
+Update-RuleSet -Restart
 
