@@ -63,7 +63,8 @@ if($MyRules){
 git add .
 git commit -m "update loon rules"
 if (-not $Local) {
-    git push    
+    git push
+    Update-RuleSet -Restart    
 }
-Update-RuleSet -Restart
+Pop-Location
 
