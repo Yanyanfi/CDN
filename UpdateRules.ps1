@@ -64,7 +64,7 @@ git add .
 git commit -m "update loon rules"
 if (-not $Local) {
     git push
-    Update-RuleSet -Restart    
+    Update-RuleSet -Restart
 }
 Pop-Location
 
