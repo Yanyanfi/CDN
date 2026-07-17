@@ -27,6 +27,7 @@ payload:
   - DOMAIN-SUFFIX,vidmax.com
   - DOMAIN-SUFFIX,yesno.wtf
   - DOMAIN-SUFFIX,mh-nexus.de
+  - DOMAIN-SUFFIX,xiaoyakankan.com
   - DOMAIN-KEYWORD,chonglangtv
   - DOMAIN-KEYWORD,realtek
   - DOMAIN-KEYWORD,deepl
