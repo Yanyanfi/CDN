@@ -3,6 +3,7 @@ payload:
   - DOMAIN,xn--vuq87fk7jum5c1xb.com
   - DOMAIN,learn.microsoft.com
   - DOMAIN,cdn.reader.gd
+  - DOMAIN-SUFFIX,slack.net
   - DOMAIN-SUFFIX,skilldrick.github.com
   - DOMAIN-SUFFIX,git.applefritter.com
   - DOMAIN-SUFFIX,qmtpro.com
